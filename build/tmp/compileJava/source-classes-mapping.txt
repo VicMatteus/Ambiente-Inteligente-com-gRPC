@@ -30,6 +30,8 @@ GrpcServer.java
  GrpcServer$tempreq$1
  GrpcServer$tempreq$Builder
  GrpcServer$tempreqOrBuilder
+grpcServidor.java
+ grpcServidor
 Lampada.java
  Lampada
 Arcondicionado.java
@@ -38,5 +40,3 @@ Sprinkler.java
  Sprinkler
 ImplementacaoServidor.java
  ImplementacaoServidor
-grpcServidor.java
- grpcServidor

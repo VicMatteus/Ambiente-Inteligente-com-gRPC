@@ -1,4 +1,4 @@
-public class Arcondicionado
+public class Arcondicionado extends Thread
 {
 	private int temperatura;
 	private boolean ligado;
@@ -7,6 +7,24 @@ public class Arcondicionado
 	{
 		this.temperatura = 17;
 		this.ligado = true;
+		this.start();
+	}
+	
+	@Override
+	public void run()//para poder mudar a informação no sevidor
+	{
+		while(true)
+		{
+			System.out.println("Temperatura atual do ar-condicionado:" +  this.getTemperatura());
+			try
+			{
+				Thread.sleep(3000);
+			}
+			catch(InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public boolean isLigado()
