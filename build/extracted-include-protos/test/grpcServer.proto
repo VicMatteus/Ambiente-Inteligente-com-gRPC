@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+
+service atuador
+{
+  rpc setTemp(tempreq) returns (reqresponse){}
+
+  rpc ligarLamp(alterReq) returns (reqresponse){}
+
+  rpc desligarLamp(alterReq) returns (reqresponse){}
+
+  rpc ligarSprink(alterReq) returns (reqresponse){}
+
+  rpc desligarSprink(alterReq) returns (reqresponse){}
+
+}
+message nada
+{
+
+}
+message tempreq
+{
+  int32 temperatura = 1;
+}
+message alterReq
+{
+  bool novoEstado = 1;
+}
+message reqresponse
+{
+  bool retorno = 1;
+}
